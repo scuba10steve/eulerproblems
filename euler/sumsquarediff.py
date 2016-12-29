@@ -1,5 +1,5 @@
 import math
-import time
+from util import timing
 
 # Project Euler problem 6 solution
 # Result: 25174150, pass
@@ -19,9 +19,6 @@ def square_of_sum(mx):
 
     return math.pow(sm, 2)
 
-t1 = time.time()
-print("Started: ", str(t1))
+timing.set_start_time()
 print(square_of_sum(100) - sum_squares(100))
-t = time.time()
-print("Finished: ", str(t))
-print("Elapsed: ", str(t - t1))
+timing.get_elapsed()
