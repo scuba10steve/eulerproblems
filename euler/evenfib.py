@@ -1,4 +1,4 @@
-import time
+from euler.util import timing
 
 # Project Euler problem 2 solution
 # Result: 4613732, pass
@@ -27,11 +27,8 @@ def sumevenfibs():
 
     return s
 
-t1 = time.time()
-print("Started: ", str(t1))
+timing.set_start_time()
 learn_fib()
 s = sumevenfibs()
 print(str(s))
-t = time.time()
-print("Finished: ", str(t))
-print("Elapsed: ", str(t - t1))
+timing.get_elapsed()

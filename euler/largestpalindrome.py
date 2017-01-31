@@ -1,5 +1,5 @@
 from util import palindrome
-import time
+from util import timing
 
 # Project Euler problem 4 solution
 # Result: 906609, pass
@@ -30,11 +30,8 @@ def get_largest_palindrome():
     return largest_product
 
 
-t1 = time.time()
-print("Started: ", str(t1))
+timing.set_start_time()
 
 print(str(get_largest_palindrome()))
 
-t = time.time()
-print("Finished: ", str(t))
-print("Elapsed: ", str(t - t1))
+timing.get_elapsed()

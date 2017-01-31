@@ -1,5 +1,5 @@
 from util import primality
-import time
+from util import timing
 
 
 # Project Euler problem 7 solution
@@ -23,12 +23,9 @@ def index_primes():
         primes.append(i)
         i += 2
 
-t1 = time.time()
-print("Started: ", str(t1))
+timing.set_start_time()
 
 index_primes()
 print(primes.pop())
-t = time.time()
 
-print("Finished: ", str(t))
-print("Elapsed: ", str(t - t1))
+timing.get_elapsed()

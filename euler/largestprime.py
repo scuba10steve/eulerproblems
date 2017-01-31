@@ -1,5 +1,5 @@
 from util import primality
-import time
+from util import timing
 
 # Project Euler problem 3 solution
 # Result: 71, 839, 1471, 6857; pass
@@ -21,9 +21,9 @@ def largest_prime(num):
 
     return prime_factors
 
-t1 = time.time()
-print("Started: ", str(t1))
+
+timing.set_start_time()
+
 largest_prime(600851475143)
-t = time.time()
-print("Finished: ", str(t))
-print("Elapsed: ", str(t - t1))
+
+timing.get_elapsed()
